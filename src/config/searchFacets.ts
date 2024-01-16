@@ -9,23 +9,83 @@ import groq from 'groq'
 export const divider: SearchFacetDivider = {type: 'divider'}
 
 export const inputs: Record<SearchFacetName, SearchFacetInputProps> = {
-  altText: {
+  altText_de_DE: {
     assetTypes: ['file', 'image'],
-    field: 'altText',
-    name: 'altText',
+    field: 'altText_de_DE',
+    name: 'altText_de_DE',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Alt text',
+    title: 'Alt text de_DE',
     type: 'string',
     value: ''
   },
-  description: {
+  altText_de_LI: {
     assetTypes: ['file', 'image'],
-    field: 'description',
-    name: 'description',
+    field: 'altText_de_LI',
+    name: 'altText_de_LI',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Description',
+    title: 'Alt text de_LI',
+    type: 'string',
+    value: ''
+  },
+  altText_en_DE: {
+    assetTypes: ['file', 'image'],
+    field: 'altText_en_DE',
+    name: 'altText_en_DE',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Alt text en_DE',
+    type: 'string',
+    value: ''
+  },
+  altText_en_LI: {
+    assetTypes: ['file', 'image'],
+    field: 'altText_en_LI',
+    name: 'altText_en_LI',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Alt text en_LI',
+    type: 'string',
+    value: ''
+  },
+  description_de_DE: {
+    assetTypes: ['file', 'image'],
+    field: 'description_de_DE',
+    name: 'description_de_DE',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Description de_DE',
+    type: 'string',
+    value: ''
+  },
+  description_de_LI: {
+    assetTypes: ['file', 'image'],
+    field: 'description_de_LI',
+    name: 'description_de_LI',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Description de_LI',
+    type: 'string',
+    value: ''
+  },
+  description_en_DE: {
+    assetTypes: ['file', 'image'],
+    field: 'description_en_DE',
+    name: 'description_en_DE',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Description en_DE',
+    type: 'string',
+    value: ''
+  },
+  description_en_LI: {
+    assetTypes: ['file', 'image'],
+    field: 'description_en_LI',
+    name: 'description_en_LI',
+    operatorType: 'empty',
+    operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
+    title: 'Description en_LI',
     type: 'string',
     value: ''
   },

@@ -62,8 +62,14 @@ const DialogAssetEdit = (props: Props) => {
   const generateDefaultValues = useCallback(
     (asset?: Asset): AssetFormData => {
       return {
-        altText: asset?.altText || '',
-        description: asset?.description || '',
+        altText_de_DE: asset?.altText_de_DE || '',
+        altText_de_LI: asset?.altText_de_LI || '',
+        altText_en_DE: asset?.altText_en_DE || '',
+        altText_en_LI: asset?.altText_en_LI || '',
+        description_de_DE: asset?.description_de_DE || '',
+        description_de_LI: asset?.description_de_LI || '',
+        description_en_DE: asset?.description_en_DE || '',
+        description_en_LI: asset?.description_en_LI || '',
         originalFilename: asset?.originalFilename || '',
         opt: {media: {tags: assetTagOptions}},
         title: asset?.title || ''
@@ -323,25 +329,90 @@ const DialogAssetEdit = (props: Props) => {
                           name="title"
                           value={currentAsset?.title}
                         />
-                        {/* Alt text */}
-                        <FormFieldInputText
-                          {...register('altText')}
-                          disabled={formUpdating}
-                          error={errors?.altText?.message}
-                          label="Alt Text"
-                          name="altText"
-                          value={currentAsset?.altText}
-                        />
-                        {/* Description */}
-                        <FormFieldInputTextarea
-                          {...register('description')}
-                          disabled={formUpdating}
-                          error={errors?.description?.message}
-                          label="Description"
-                          name="description"
-                          rows={5}
-                          value={currentAsset?.description}
-                        />
+                        <details>
+                          <summary>Alt Text</summary>
+                          {/* Alt text de_DE */}
+                          <FormFieldInputText
+                            {...register('altText_de_DE')}
+                            disabled={formUpdating}
+                            error={errors?.altText_de_DE?.message}
+                            label="Alt Text de_DE"
+                            name="altText_de_DE"
+                            value={currentAsset?.altText_de_DE}
+                          />
+                          {/* Alt text de_LI */}
+                          <FormFieldInputText
+                            {...register('altText_de_LI')}
+                            disabled={formUpdating}
+                            error={errors?.altText_de_LI?.message}
+                            label="Alt Text de_LI"
+                            name="altText_de_LI"
+                            value={currentAsset?.altText_de_LI}
+                          />
+                          {/* Alt text en_DE */}
+                          <FormFieldInputText
+                            {...register('altText_en_DE')}
+                            disabled={formUpdating}
+                            error={errors?.altText_en_DE?.message}
+                            label="Alt Text en_DE"
+                            name="altText_en_DE"
+                            value={currentAsset?.altText_en_DE}
+                          />
+                          {/* Alt text en_LI */}
+                          <FormFieldInputText
+                            {...register('altText_en_LI')}
+                            disabled={formUpdating}
+                            error={errors?.altText_en_LI?.message}
+                            label="Alt Text en_LI"
+                            name="altText_en_LI"
+                            value={currentAsset?.altText_en_LI}
+                          />
+                        </details>
+                        <details>
+                          <summary>
+                            Description
+                          </summary>
+                          {/* Description de_DE */}
+                          <FormFieldInputTextarea
+                            {...register('description_de_DE')}
+                            disabled={formUpdating}
+                            error={errors?.description_de_DE?.message}
+                            label="Description de_DE"
+                            name="description_de_DE"
+                            rows={5}
+                            value={currentAsset?.description_de_DE}
+                          />
+                          {/* Description de_LI */}
+                          <FormFieldInputTextarea
+                            {...register('description_de_LI')}
+                            disabled={formUpdating}
+                            error={errors?.description_de_LI?.message}
+                            label="Description de_LI"
+                            name="description_de_LI"
+                            rows={5}
+                            value={currentAsset?.description_de_LI}
+                          />
+                          {/* Description en_DE */}
+                          <FormFieldInputTextarea
+                            {...register('description_en_DE')}
+                            disabled={formUpdating}
+                            error={errors?.description_en_DE?.message}
+                            label="Description en_DE"
+                            name="description_en_DE"
+                            rows={5}
+                            value={currentAsset?.description_en_DE}
+                          />
+                          {/* Description en_LI */}
+                          <FormFieldInputTextarea
+                            {...register('description_en_LI')}
+                            disabled={formUpdating}
+                            error={errors?.description_en_LI?.message}
+                            label="Description en_LI"
+                            name="description_en_LI"
+                            rows={5}
+                            value={currentAsset?.description_en_LI}
+                          />
+                        </details>
                       </Stack>
                     </TabPanel>
 

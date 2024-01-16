@@ -6,8 +6,14 @@ export const tagOptionSchema = z.object({
 })
 
 export const assetFormSchema = z.object({
-  altText: z.string().trim().optional(),
-  description: z.string().trim().optional(),
+  altText_de_DE: z.string().trim().optional(),
+  altText_de_LI: z.string().trim().optional(),
+  altText_en_DE: z.string().trim().optional(),
+  altText_en_LI: z.string().trim().optional(),
+  description_de_DE: z.string().trim().optional(),
+  description_de_LI: z.string().trim().optional(),
+  description_en_DE: z.string().trim().optional(),
+  description_en_LI: z.string().trim().optional(),
   opt: z.object({
     media: z.object({
       tags: z.array(tagOptionSchema).nullable()
